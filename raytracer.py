@@ -30,6 +30,12 @@ class Ray:
         
         if not isinstance(direction, list):
             raise TypeError ('direction must be a list')
+            
+        if not isinstance(direction, float or int):
+            raise TypeError ('direction must be a float or integer')
+            
+         if not isinstance(pos, float or int):
+            raise TypeError ('position must be a float or integer')
         
         self.__pos = [np.array(pos)]
         self.__dir = [(1/mag(direction))*np.array(direction)]
